@@ -1,0 +1,107 @@
+.about-container {
+  font-family: 'Segoe UI', sans-serif;
+  padding: 40px 20px;
+  background-color: #fefefe;
+  color: #333;
+}
+
+.about-hero {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.about-hero h1 {
+  font-size: 2.5rem;
+  color: rgb(1, 15, 138);
+}
+
+.about-hero p {
+  font-size: 1.2rem;
+  color: #f0f4f8;
+  margin-top: 10px;
+}
+
+.about-mission {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 30px 0;
+  background-color: #f0f4f8;
+  margin-bottom: 60px;
+}
+
+.about-mission h2 {
+  color: #1e3a8a;
+  margin-bottom: 10px;
+}
+
+.about-mission p {
+  max-width: 400px;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+.about-team {
+  text-align: center;
+}
+
+.about-team h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #1a1a1a;
+}
+
+.team-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+.team-card {
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+  width: 220px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+}
+
+.team-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.team-card h4 {
+  margin-bottom: 5px;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.team-card p {
+  font-size: 0.95rem;
+  color: #777;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-mission {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .team-card {
+    width: 90%;
+    max-width: 300px;
+  }
+}
+
