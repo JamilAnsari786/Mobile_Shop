@@ -14,8 +14,10 @@
   padding: 12px 30px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   font-family: Arial, sans-serif;
-  flex-wrap: wrap;
+  flex-wrap: nowrap; /* ✅ Ensure everything stays in one line */
+  overflow-x: auto;   /* ✅ Allow horizontal scroll if needed */
 }
+
 
 /* Logo */
 .logo img {
@@ -99,43 +101,34 @@
 }
 
 /* Devices ≤ 768px */
+/* Devices ≤ 768px */
 @media (max-width: 768px) {
   .navbar {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 12px 16px;
+    padding: 8px 12px; /* Reduced padding */
   }
 
   .logo img {
-    width: 55px;
-    height: 55px;
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
   }
 
   .nav-links {
-    flex-direction: row;
-    gap: 18px;
-    font-size: 16px;
-    flex-wrap: wrap;
-    justify-content: center;
-    flex: 1;
-  }
-
-  .nav-right {
-    flex-direction: row;
-    align-items: center;
-    gap: 12px;
-  }
-
-  .login button {
-    font-size: 16px;
-    padding: 5px 10px;
+    font-size: 14px;
+    gap: 15px;
   }
 
   .cart {
     font-size: 20px;
   }
+
+  .login button {
+    font-size: 14px;
+    padding: 5px 10px;
+    margin-right: 10px;
+  }
 }
+
 
 /* Devices ≤ 480px */
 @media (max-width: 480px) {
@@ -162,3 +155,5 @@
     gap: 8px;
   }
 }
+
+

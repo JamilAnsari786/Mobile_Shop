@@ -1,5 +1,5 @@
 import React from "react";
-import "./AboutPage.css";
+import "./Aboutpage.css";
 
 const teamMembers = [
   {
@@ -22,22 +22,34 @@ const teamMembers = [
 const AboutPage = () => {
   return (
     <div className="about-container">
+      {/* Hero Section */}
+      <section className="about-hero">
+        <h1>About AJ Mobile Shop</h1>
+        <p>
+          Welcome to AJ Mobile Shop – your trusted mobile store for top brands,
+          expert service, and unbeatable value.
+        </p>
+      </section>
 
-      {/* Services Section */}
+      {/* Mission & Services Section */}
       <section className="about-mission">
-        <div>
+        <div className="mission-box">
           <h2>What We Offer</h2>
-          <p>📱 Latest Smartphones from Top Brands</p>
-          <p>🔧 On-Site Repair & Service Center</p>
-          <p>💳 Easy EMI & Payment Options</p>
-          <p>🎁 Exclusive Deals & Combo Offers</p>
+          <ul>
+            <li>📱 Latest Smartphones from Top Brands</li>
+            <li>🔧 On-Site Repair & Service Center</li>
+            <li>💳 Easy EMI & Payment Options</li>
+            <li>🎁 Exclusive Deals & Combo Offers</li>
+          </ul>
         </div>
-        <div>
-          
+
+        <div className="mission-box">
           <h2>Why Shop With Us</h2>
           <p>
-            With over 5 years in the mobile industry, we understand your tech needs.
-            Our mission is to make mobile shopping simple, affordable, and trustworthy — whether you're buying a new device or getting your old one fixed.
+            With over 5 years in the mobile industry, we understand your tech
+            needs. Our mission is to make mobile shopping simple, affordable,
+            and trustworthy — whether you're buying a new device or getting your
+            old one fixed.
           </p>
         </div>
       </section>
@@ -45,10 +57,12 @@ const AboutPage = () => {
       {/* Team Section */}
       <section className="about-team">
         <h2>Meet Our Team</h2>
-        <div className="team-cards">
+        <div className="team-wrapper">
           {teamMembers.map((member, index) => (
             <div className="team-card" key={index}>
-              <img src={member.image} alt={member.name} />
+              <div className="team-image-wrapper">
+                <img src={member.image} alt={member.name} />
+              </div>
               <h4>{member.name}</h4>
               <p>{member.role}</p>
             </div>
